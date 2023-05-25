@@ -20,17 +20,6 @@ namespace PlatformerMVC
 
         public GeneratorController(GeneratorLevelView view)
         {
-            /*_tilemap = view._tilemap;
-            _tile = view._tile;
-            _mapHeight = view._mapHeight;
-            _mapWidth = view._mapWidth;
-
-            _fillPercent = view._fillPercent;
-            _smoothPercent = view._smoothPercent;
-
-            _borders = view._borders;
-            _map = new int[_mapWidth, _mapHeight];*/
-            
             _tilemap = view.Tilemap;
             _tile = view.Tile;
             _mapHeight = view.MapHeight;
@@ -105,9 +94,9 @@ namespace PlatformerMVC
         {
             int neighbour = 0;
 
-            for (int gridX = x-1; gridX < x+1; gridX++)
+            for (int gridX = x-1; gridX <= x+1; gridX++)
             {
-                for (int gridY = y-1; gridY < y+1; gridY++)
+                for (int gridY = y-1; gridY <= y+1; gridY++)
                 {
                     if (gridX >= 0 && gridX < _mapWidth && gridY >= 0 && gridY < _mapHeight)
                     {
@@ -139,8 +128,7 @@ namespace PlatformerMVC
                 {
                     if (_map[x, y] == 1)
                     {
-                        Vector3Int tilePosition = new Vector3Int(-_mapWidth / 2 + x, _mapHeight / 2 + y, 0);
-                        _tilemap.SetTile(tilePosition, _tile);
+                        _tilemap.SetTile(new Vector3Int(-100 + x, -100 + y, 0), _tile);
                     }
                 }
             }
