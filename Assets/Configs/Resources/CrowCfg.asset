@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697328cd0deca3e4b82b3fe8329d59ce, type: 3}
+  m_Name: CrowCfg
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 0
+    Sprites:
+    - {fileID: -456226448, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: 1010878068, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: -401258336, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: -398760385, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+  - Track: 1
+    Sprites:
+    - {fileID: -456226448, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: 1010878068, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: -401258336, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
+    - {fileID: -398760385, guid: f15887b3dcd824849b97e7a74bacdcd1, type: 3}
