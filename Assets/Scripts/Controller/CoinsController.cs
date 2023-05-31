@@ -32,11 +32,21 @@ namespace PlatformerMVC
             _coinAnimator.Update();
             _contactPooler.Update();
 
+            //Здесь можно прописать, чтобы все монеты активировались, когда взята предыдущая
+            /*foreach (var coins in _coinView.AllCoins)
+            {
+                coins
+            }*/
+            
+            
+
             if (_contactPooler.isTouched)
             {
                 _coinView.gameObject.SetActive(false);
             }
         }
+        
+        
     }
 }
 

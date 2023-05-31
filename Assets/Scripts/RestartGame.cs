@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,18 +6,25 @@ namespace PlatformerMVC
 {
     public class RestartGame : MonoBehaviour
     {
-        //private PlayerController _player;
+        private GameManager _gameManager;
 
-        /* public RestartGame(PlayerController player)
-         {
-             _player = player;
-         }*/
-        void OnTriggerEnter2D(Collider2D other)
+        private void Awake()
+        {
+            _gameManager = GameObject.FindObjectOfType<GameManager>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Reset();
             }
+        }
+
+        public void Reset()
+        {
+            _gameManager.Death();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

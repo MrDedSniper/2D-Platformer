@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda7b5af09ea7404288286afa1d03c9b, type: 3}
+  m_Name: ButtonsStoryConfig
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 11400000, guid: 17368c29a69641b4bb22ed964a589023, type: 2}
+  - {fileID: 11400000, guid: c4327da19c1274e478f1becb0ae6c6d2, type: 2}
+  - {fileID: 11400000, guid: 827c314d0cda4144cbc1b21417caa801, type: 2}
+  questStoryType: 1

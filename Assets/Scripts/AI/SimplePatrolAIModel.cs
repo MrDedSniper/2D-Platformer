@@ -33,7 +33,7 @@ namespace PlatformerMVC
             return _config.Waypoints[_currentPointIndex];
         }
         
-        /*public void OnTriggerEnter2D(Collider2D other)
+        public void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
@@ -47,7 +47,7 @@ namespace PlatformerMVC
             {
                 _target = GetNextWaypoint();
             }
-        }*/
+        }
 
     }
 }

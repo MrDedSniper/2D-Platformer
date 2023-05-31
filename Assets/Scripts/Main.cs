@@ -12,7 +12,8 @@ namespace PlatformerMVC
         [SerializeField] private EnemyView _enemyView;
         [SerializeField] private CrowView _crowView;
         [SerializeField] private GeneratorLevelView _generatorView;
-        
+        [SerializeField] private GeneratorLevelView _msgeneratorView;
+
         private PlayerController _playerController;
         private CoinsController _coinsController;
         private CannonController _cannonController;
@@ -21,6 +22,7 @@ namespace PlatformerMVC
         private GolemController _enemyController;
         private CrowController _crowController;
         private GeneratorController _generatorController;
+        private MSGeneratorController _msgeneratorController;
         
         private void Awake()
         {
@@ -31,8 +33,13 @@ namespace PlatformerMVC
             _simplePatrolAI = new SimplePatrolAI(_enemyView, new SimplePatrolAIModel(_aiConfig));
             _enemyController = new GolemController(_enemyView);
             _crowController = new CrowController(_crowView);
+            
             _generatorController = new GeneratorController(_generatorView);
             _generatorController.Start();
+            
+            _msgeneratorController = new MSGeneratorController(_msgeneratorView);
+            _msgeneratorController.Start();
+            
         }
         private void Update()
         {

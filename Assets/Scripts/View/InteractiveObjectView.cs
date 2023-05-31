@@ -6,11 +6,31 @@ namespace PlatformerMVC
     public class InteractiveObjectView : LevelObjectView
     {
         public Action<BulletView> TakeDamage { get; set; }
-        private void OnTriggerEnter(Collider2D other)
+        public Action<QuestObjectView> OnComplete { get; set; }
+
+        //public Action<LevelObjectView> OnLevelObjectContact { get; set; }
+
+        public bool _isDeathDamage;
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (other.TryGetComponent(out BulletView contactView))
+            if(collision.TryGetComponent(out LevelObjectView contactView))
             {
-                TakeDamage?.Invoke(contactView);
+                
+                if(contactView is QuestObjectView)
+                {
+                    OnComplete?.Invoke((QuestObjectView)contactView);
+                }
+
+                if (contactView is BulletView)
+                {
+                    TakeDamage?.Invoke((BulletView)contactView);
+                }
+            }
+
+            if (collision.gameObject.tag == "DeathZone")
+            {
+                _isDeathDamage = true;
             }
         }
     }

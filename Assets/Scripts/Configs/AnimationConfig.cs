@@ -11,7 +11,7 @@ namespace PlatformerMVC
         Jump = 2
     }
     
-    [CreateAssetMenu(fileName = "SET-NAME-Cfg", menuName = "Configs/Animation", order = 1)]
+    [CreateAssetMenu(fileName = "AnimCfg", menuName = "Configs/Animation", order = 1)]
 
     public class AnimationConfig : ScriptableObject
     {

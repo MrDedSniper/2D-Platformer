@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PlatformerMVC
@@ -28,15 +24,15 @@ namespace PlatformerMVC
             isLeftContact = false;
             isRightContact = false;
             isTouched = false;
-
+            
             _contactCount = _collider.GetContacts(_contactPoint);
 
             for (int i = 0; i < _contactCount; i++)
             {
-                if (_contactPoint[i].normal.y > _treshold) isGrounded = true;
-                if (_contactPoint[i].normal.x > _treshold) isLeftContact = true;
-                if (_contactPoint[i].normal.x < -_treshold) isRightContact = true;
-                if (_contactPoint[i].normal.x > 0 || _contactPoint[i].normal.y > 0) isTouched = true;
+                if (_contactPoint[i].normal.y >= _treshold) isGrounded = true;
+                if (_contactPoint[i].normal.x >= _treshold) isLeftContact = true;
+                if (_contactPoint[i].normal.x <= -_treshold) isRightContact = true;
+                if (_contactPoint[i].normal.x >= 0 || _contactPoint[i].normal.y > 0) isTouched = true;
             }
         }
     } 

@@ -60,13 +60,6 @@ namespace PlatformerMVC
                     }
                 }
             }
-            
-            Debug.Log(_map);
-            Debug.Log(_mapHeight);
-            Debug.Log(_mapWidth);
-            Debug.Log(_tile);
-            Debug.Log(_fillPercent);
-            Debug.Log(_smoothPercent);
         }
 
         private void SmoothMap()

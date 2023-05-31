@@ -12,7 +12,7 @@ namespace PlatformerMVC
         private AnimationConfig _config;
         private EnemyView _enemyView;
         
-        private Transform _golemTransform;
+        [SerializeField] private Transform _golemTransform;
         private Transform _targetTransform;
 
         private float _animationSpeed = 10f;
@@ -43,7 +43,7 @@ namespace PlatformerMVC
         {
             _enemyAnimator.Update();
             _contactPooler.Update();
-            
+
             /*if (_targetTransform.transform.position.x < _golemTransform.position.x)
             {
                 foreach (SpriteRenderer renderer in _enemyView._spriteRenderers)
@@ -56,6 +56,11 @@ namespace PlatformerMVC
             {
                 _enemyView._spriteRenderers[0].flipX = true;
             }*/
+        }
+        
+        private void MoveTowards()
+        {
+            
         }
     }
 }
